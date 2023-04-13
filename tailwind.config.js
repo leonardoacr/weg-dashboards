@@ -13,6 +13,11 @@ module.exports = {
       sans: ['Roboto', 'sans-serif'],
     },
     extend: {
+      screens: {
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+      },
       colors: {
         'background-page': '#f2f7fa',
         'background-header': '#0a1f4d',

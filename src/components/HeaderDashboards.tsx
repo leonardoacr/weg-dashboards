@@ -1,8 +1,10 @@
+import { AiFillCaretDown } from "react-icons/ai";
+
 const HeaderDashboards = () => {
   return (
-    <div className="mb-2 h-40 border border-gray-400 px-6 py-4">
+    <div className="mb-2 h-1/4 border border-gray-400 px-6 py-4">
       <div className="block h-1/2 ">
-        <div className="grid grid-cols-7 gap-3 text-black sm:grid-cols-1 md:grid-cols-7">
+        <div className="grid gap-3 text-black sm:grid-cols-1 lg:grid-cols-7">
           <h2 className="font-bold text-label-color">Turno 1215</h2>
           <div>
             <h3 className="text-label-color">Produto</h3>
@@ -39,26 +41,27 @@ const HeaderDashboards = () => {
           </div>
         </div>
       </div>
-      <div className="block h-1/2">
-        <div className="grid grid-cols-4 gap-3 text-black sm:grid-cols-1 md:grid-cols-4">
+      <div className="mt-4 block h-1/2">
+        <div className="grid gap-3 text-black sm:grid-cols-1 lg:grid-cols-4">
           <div className="relative">
             <h2 className="text-label-color">Linha</h2>
-            <select className="focus:shadow-outline block w-4/6 appearance-none rounded border border-gray-400 bg-white px-4 py-2 pr-8 leading-tight shadow hover:border-gray-500 focus:outline-none">
-              <option>132M | TFVE - B34D</option>
-              <option>Other option 1</option>
-              <option>Other option 2</option>
-              <option>Other option 3</option>
-            </select>
-            <div className="pointer-events-none absolute inset-y-11 right-20 flex items-center px-4 text-gray-700">
-              <svg
-                className="h-8 w-24 fill-current"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-              >
-                <path d="M6 8l4 4 4-4"></path>
-              </svg>
+            <div className="relative inline-block w-4/6">
+              <select className="focus:shadow-outline block w-full appearance-none rounded border border-gray-400 bg-white px-4 py-2 pr-8 leading-tight shadow hover:border-gray-500 focus:outline-none">
+                <option>132S | TFVE - B34D</option>
+                <option>160M | TFVE - B34D</option>
+                <option>180M | TFVE - B34D</option>
+                <option>200L | TFVE - B34D</option>
+                <option>225S/M | TFVE - B34D</option>
+                <option>250S/M | TFVE - B34D</option>
+                <option>280S/M | TFVE - B34D</option>
+                <option>315S/M | TFVE - B34D</option>
+              </select>
+              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">
+                <AiFillCaretDown className="text-gray-700" size={24} />
+              </div>
             </div>
           </div>
+
           <div>
             <div className="flex items-center gap-2">
               <h2 className="text-5xl font-bold text-green-700">70,2%</h2>

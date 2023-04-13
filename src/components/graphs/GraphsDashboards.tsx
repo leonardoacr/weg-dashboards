@@ -9,10 +9,10 @@ import GraphStatusHistory from "./GraphStatusHistory";
 const GraphsDashboards = () => {
   const chartLabelColor = "#636365";
   const chartBackgroundColor = "rgba(255, 255, 255, 1)";
-  const chartHeight = "h-80";
+  const chartHeight = "lg:h-96 sm:h-20";
 
   return (
-    <div className="mx-auto">
+    <div className="">
       <div className="grid grid-cols-1 gap-3 px-6 text-black sm:grid-cols-1 lg:grid-cols-2">
         <div className={`${chartHeight} w-full`}>
           <Graphs
@@ -56,7 +56,7 @@ const GraphsDashboards = () => {
             ]}
           />
         </div>
-        <div className={`${chartHeight} w-full bg-white px-4 pt-2`}>
+        <div className={`${chartHeight} w-full bg-white px-4 py-2`}>
           <div>
             <h2 className="px-4 pt-2 font-bold text-label-color">
               Histórico do Status
@@ -64,26 +64,23 @@ const GraphsDashboards = () => {
             <div className="flex h-24 w-full items-center justify-center">
               <GraphStatusHistory />
             </div>
-
-            <div className="flex h-64">
-              <div className="w-1/2">
-                <div className="h-full w-full ">
-                  <Graphs
-                    graphData={[
-                      {
-                        title: "",
-                        data: fourthGraphData,
-                        chartLabelColor: "chartLabelColor",
-                        chartBackgroundColor: "rgba(255,255,255,0)",
-                        xLabel: "",
-                        yLabel: "",
-                      },
-                    ]}
-                  />
-                </div>
+            <div className="grid grid-cols-1 sm:h-1/2 sm:grid-cols-2 md:h-64">
+              <div className="h-full w-full">
+                <Graphs
+                  graphData={[
+                    {
+                      title: "",
+                      data: fourthGraphData,
+                      chartLabelColor: "chartLabelColor",
+                      chartBackgroundColor: "rgba(255,255,255,0)",
+                      xLabel: "",
+                      yLabel: "",
+                    },
+                  ]}
+                />
               </div>
-              <div className="flex h-64 w-1/2 items-center ">
-                <div className="flex w-full items-center justify-center pr-2">
+              <div className="h-full w-full">
+                <div className="flex h-full w-full items-center justify-center pr-2">
                   <Table />
                 </div>
               </div>

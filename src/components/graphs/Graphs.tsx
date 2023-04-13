@@ -70,7 +70,7 @@ const Graphs = ({ graphData }: Props) => {
         if (chart !== null) {
           Plot.purge(chart);
         } else {
-          window.location.href = "/";
+          // window.location.href = "/";
         }
       });
     };
