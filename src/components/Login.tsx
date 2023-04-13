@@ -4,10 +4,7 @@ import { AiFillCaretDown } from "react-icons/ai";
 
 const Login = () => {
   return (
-    <form
-      className="mb-4 w-1/4 border border-l-0 border-t-0 border-slate-400
-     bg-white pb-8 shadow-md"
-    >
+    <form className="mx-2 mb-4 w-full border border-l-0 border-t-0 border-slate-400 bg-white pb-8 shadow-md sm:w-1/2 md:w-1/4">
       <div className="relative h-full w-full bg-weg-blue">
         <h2 className="p-4 font-bold">Acesso ao Dashboards WEG</h2>
         <AiFillCaretDown

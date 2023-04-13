@@ -121,7 +121,8 @@ const thirdData: GraphData['data'][0] = {
     type: 'scatter' as PlotType,
     name: 'Metodologia Six-Sigma',
     line: {
-        color: 'purple'
+        color: 'green',
+        width: 3
     }
 }
 export const secondGraphData = [firstData, secondData, thirdData];

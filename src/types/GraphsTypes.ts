@@ -6,14 +6,20 @@ export interface GraphData {
         x: number[] | string[];
         y: number[];
         type: PlotType;
+        mode?: "lines" | "markers" | "text" | "lines+markers" |
+        "text+markers" | "text+lines" | "text+lines+markers" | "none";
+        fill?: "none" | "tozeroy" | "tozerox" | "tonexty" |
+        "tonextx" | "toself" | "tonext" | undefined;
         name?: string;
         line?: {
             color?: string;
+            colors?: string[];
             width?: number;
         }
         marker?: {
             color?: string;
-            colors?: string[]; // add colors property here
+            colors?: string[];
+            size?: number;
         }
     }[];
     chartLabelColor: string;

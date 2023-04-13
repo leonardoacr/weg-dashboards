@@ -21,7 +21,6 @@ const Graphs = ({ graphData }: Props) => {
       const data: Data[] = graphData[index].data.map((dataSet) => {
         const { type, ...rest } = dataSet;
         if (type === "pie") {
-          // For pie chart, use the correct property name
           const pieData: DataWithPie = {
             ...rest,
             type: "pie",
@@ -30,7 +29,6 @@ const Graphs = ({ graphData }: Props) => {
           };
           return pieData;
         } else {
-          // For other charts, use the default property name
           const nonPieData: Data = {
             ...rest,
             type: type,
@@ -59,6 +57,8 @@ const Graphs = ({ graphData }: Props) => {
         legend: {
           traceorder: "normal",
         },
+        paper_bgcolor: graphData[index].chartBackgroundColor,
+        plot_bgcolor: "rgba(0,0,0,0)",
       };
 
       Plot.newPlot(chart, data, layout);

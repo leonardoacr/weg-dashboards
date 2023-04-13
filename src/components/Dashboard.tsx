@@ -1,4 +1,4 @@
-import GraphsDashboards from "./GraphsDashboards";
+import GraphsDashboards from "./graphs/GraphsDashboards";
 import HeaderDashboards from "./HeaderDashboards";
 
 const Dashboard = () => {
