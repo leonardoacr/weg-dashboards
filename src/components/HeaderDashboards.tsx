@@ -61,8 +61,8 @@ const HeaderDashboards = () => {
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <h2 className="text-5xl font-bold text-green-700">70.2%</h2>
-              <h2 className="text-2xl font-bold text-red-700">-6.7↓</h2>
+              <h2 className="text-5xl font-bold text-green-700">70,2%</h2>
+              <h2 className="text-2xl font-bold text-red-700">-6,7↓</h2>
             </div>
             <h2 className="font-bold text-label-color">
               Fator Qualidade / 1215
@@ -70,15 +70,15 @@ const HeaderDashboards = () => {
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <h2 className="text-5xl font-bold text-green-700">99.7%</h2>
-              <h2 className="text-2xl font-bold text-green-500">-0.4↑</h2>
+              <h2 className="text-5xl font-bold text-green-700">99,7%</h2>
+              <h2 className="text-2xl font-bold text-green-500">-0,4↑</h2>
             </div>
             <h2 className="font-bold text-label-color">Capacidade / 1215</h2>
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <h2 className="text-5xl font-bold text-green-700">70.0%</h2>
-              <h2 className="text-2xl font-bold text-red-700">-6.6↓</h2>
+              <h2 className="text-5xl font-bold text-green-700">70,0%</h2>
+              <h2 className="text-2xl font-bold text-red-700">-6,6↓</h2>
             </div>
             <h2 className="font-bold text-label-color">OEE / 1215</h2>
           </div>

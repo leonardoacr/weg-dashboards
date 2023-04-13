@@ -3,12 +3,17 @@ import { PlotType } from "plotly.js";
 export interface GraphData {
     title: string;
     data: {
-        x: number[];
+        x: number[] | string[];
         y: number[];
         type: PlotType;
-        line: {
+        name?: string;
+        line?: {
             color?: string;
             width?: number;
+        }
+        marker?: {
+            color?: string;
+            colors?: string[]; // add colors property here
         }
     }[];
     chartLabelColor: string;

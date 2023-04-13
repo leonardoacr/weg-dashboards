@@ -45,7 +45,7 @@ const Header = () => {
           <Link key={route.path} href={route.path}>
             <span
               className={`mx-2 cursor-pointer font-bold ${
-                router.pathname === route.path ? "text-purple-700" : ""
+                router.pathname === route.path ? "text-green-700" : ""
               }`}
             >
               {route.name}
