@@ -1,8 +1,12 @@
 import { PlotType } from "plotly.js";
 
+const arraySize = 30;
+const maxValue = 2;
+const xValues = Array.from(Array(arraySize).keys()); // creates an array with values [0, 1, 2, ..., 29]
+
 const firstData = {
-    x: [0, 2, 3, 4, 6, 7, 8, 10, 11],
-    y: [2, 2.1, 3.4, 1.5, 3.8, 4, 3.8, 2.2, 3.2],
+    x: xValues.map(x => x * 0.5), // generates an array with values [0, 0.5, 1, 1.5, ..., 14.5]
+    y: Array.from({ length: arraySize }, () => Math.random() * maxValue), // generates an array with arraySize random values between 0 and 5
     type: 'scatter' as PlotType,
     name: 'Dados reais',
     line: {
@@ -11,9 +15,12 @@ const firstData = {
     }
 };
 
+const firstDataSum = firstData.y.reduce((a, b) => a + b, 0);
+const firstDataAverage = firstDataSum / arraySize;
+
 const secondData = {
-    x: [0, 2, 3, 4, 6, 7, 8, 10, 11],
-    y: [2.9, 2.9, 2.9, 2.9, 2.9, 2.9, 2.9, 2.9, 2.9],
+    x: xValues.map(x => x * 0.5),
+    y: Array.from({ length: arraySize }, () => firstDataAverage),
     type: 'scatter' as PlotType,
     name: 'Média',
     line: {
@@ -22,4 +29,16 @@ const secondData = {
     }
 };
 
-export const firstGraphData = [firstData, secondData];
+
+const thirdData = {
+    x: xValues.map(x => x * 0.5),
+    y: Array.from({ length: arraySize }, () => Math.random() * maxValue),
+    type: 'scatter' as PlotType,
+    name: 'Dados simulados',
+    line: {
+        color: 'rgb(255, 0, 0)',
+        width: 2
+    }
+};
+
+export const firstGraphData = [firstData, secondData, thirdData];

@@ -3,7 +3,7 @@ import { PlotType } from "plotly.js";
 
 export const data = [
     {
-        reason: "Net Run Time",
+        reason: "Concluído",
         duration: "73.89",
         color: "text-green-700",
     },

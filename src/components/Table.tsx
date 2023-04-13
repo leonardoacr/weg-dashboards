@@ -2,9 +2,14 @@ import { data } from "@/data/fourthGraph";
 import React from "react";
 
 const Table = () => {
+  const colorMap: { [key: string]: string } = data.reduce((acc: any, curr) => {
+    acc[curr.reason] = curr.color;
+    return acc;
+  }, {});
+
   const getClassByIndex = (index: number) => {
-    const backgroundColor = index % 2 === 0 ? "bg-gray-500" : "bg-gray-400";
-    const textColor = index % 2 === 0 ? "text-white" : "";
+    const backgroundColor = index % 2 === 0 ? "bg-gray-400" : "bg-gray-300";
+    const textColor = colorMap[data[index].reason];
     return `${backgroundColor} ${textColor} ${textSize}`;
   };
 
