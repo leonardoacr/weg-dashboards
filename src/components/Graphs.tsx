@@ -67,7 +67,11 @@ const Graphs = ({ graphData }: Props) => {
     // Cleanup function to remove Plotly.js charts
     return () => {
       chartRefs.current.forEach((chart) => {
-        Plot.purge(chart);
+        if (chart !== null) {
+          Plot.purge(chart);
+        } else {
+          window.location.href = "/";
+        }
       });
     };
   }, [graphData]);

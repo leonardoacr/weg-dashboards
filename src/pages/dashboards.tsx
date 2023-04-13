@@ -4,11 +4,12 @@ import Dashboard from "@/components/Dashboard";
 
 const Dashboards = () => {
   return (
-    <div className="font-montserrat h-screen w-full bg-background-page text-white">
+    <div className="font-montserrat h-full w-full bg-background-page text-white">
       <Header />
-      <div className="flex items-center justify-center pb-20">
+      <div className="flex items-center justify-center">
         <Dashboard />
       </div>
+      <div className="h-16"></div>
     </div>
   );
 };

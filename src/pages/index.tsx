@@ -1,5 +1,6 @@
+import Login from "@/components/Login";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import Header from "../components/Header";
 
 export default function Home() {
@@ -7,11 +8,16 @@ export default function Home() {
     hover:bg-slate-800 focus:outline-none`;
 
   return (
-    <div className="font-montserrat h-screen bg-background-page text-white">
+    <div className="font-montserrat h-screen bg-[url('/pattern-motor.svg')] bg-center bg-no-repeat text-white">
       <Header />
-      <button data-testid="dashboardButton" className={customButtonClass}>
-        <Link href="/dashboards">Dashboards</Link>
-      </button>
+      <div>
+        <div className="flex h-screen items-center justify-center">
+          <Login />
+          {/* <button data-testid="dashboardButton" className={customButtonClass}>
+            <Link href="/dashboards">Dashboards</Link>
+          </button> */}
+        </div>
+      </div>
     </div>
   );
 }

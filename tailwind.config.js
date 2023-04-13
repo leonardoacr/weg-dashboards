@@ -10,14 +10,15 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ['Montserrat', 'sans-serif'],
+      sans: ['Roboto', 'sans-serif'],
     },
     extend: {
       colors: {
         'background-page': '#f2f7fa',
         'background-header': '#0a1f4d',
         'background-dashboard': 'white',
-        'label-color': '#636365'
+        'label-color': '#636365',
+        'weg-blue': '#0090c5',
       },
     },
   },

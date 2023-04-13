@@ -1,6 +1,6 @@
 const HeaderDashboards = () => {
   return (
-    <div className="h-40 px-6 py-4">
+    <div className="mb-2 h-40 border border-gray-400 px-6 py-4">
       <div className="block h-1/2 ">
         <div className="grid grid-cols-7 gap-3 text-black sm:grid-cols-1 md:grid-cols-7">
           <h2 className="font-bold text-label-color">Turno 1215</h2>

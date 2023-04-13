@@ -3,7 +3,7 @@ import React from "react";
 
 const Table = () => {
   const getClassByIndex = (index: number) => {
-    const backgroundColor = index % 2 === 0 ? "bg-gray-700" : "bg-gray-500";
+    const backgroundColor = index % 2 === 0 ? "bg-gray-500" : "bg-gray-400";
     const textColor = index % 2 === 0 ? "text-white" : "";
     return `${backgroundColor} ${textColor} ${textSize}`;
   };
