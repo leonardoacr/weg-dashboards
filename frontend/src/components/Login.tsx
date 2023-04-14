@@ -18,7 +18,8 @@ const Login = () => {
     const formData = new URLSearchParams();
     formData.append("username", username);
     formData.append("password", password);
-    const urlBase = "http://localhost:8000/login/";
+    // const urlBase = "http://localhost:8000/login/";
+    const urlBase = "https://pythonprojects.pythonanywhere.com/login/";
 
     const response = await fetch(urlBase, {
       method: "POST",
