@@ -51,7 +51,7 @@ const Header = () => {
                   height={10}
                   alt="weg-icon"
                 />
-                <span className="ml-2 text-lg font-bold text-white">
+                <span className="ml-2 hidden text-lg font-bold text-white md:block">
                   DASHBOARDS
                 </span>
               </div>
@@ -63,7 +63,10 @@ const Header = () => {
             <FaUserCircle className="mr-2 text-white" size={20} />
             <span className="mr-4 text-white">{username}</span>
             <button
-              className="flex items-center justify-center rounded-md bg-red-500 px-4 py-1.5 text-base font-bold text-white hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-opacity-50"
+              className="flex items-center justify-center rounded-md
+               bg-red-500 px-4 py-1.5 text-base font-bold text-white
+                hover:bg-red-600 focus:outline-none focus:ring-2
+                 focus:ring-red-600 focus:ring-opacity-50"
               onClick={handleLogout}
             >
               <FaSignOutAlt className="mr-2" size={18} />
