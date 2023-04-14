@@ -11,12 +11,7 @@ export default function Home() {
     <div className="font-montserrat h-screen bg-[url('/pattern-motor.svg')] bg-center bg-no-repeat text-white">
       <Header />
       <div>
-        <div className="flex h-screen items-center justify-center">
-          <Login />
-          {/* <button data-testid="dashboardButton" className={customButtonClass}>
-            <Link href="/dashboards">Dashboards</Link>
-          </button> */}
-        </div>
+        <Login />
       </div>
     </div>
   );
