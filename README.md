@@ -50,6 +50,10 @@ password (Senha): admin
 
 ✔️ TypeScript | ✔️ ReactJS | ✔️ NextJS | ✔️ TailwindCSS | ✔️ Plotly | ✔️ Victory
 
+### Deploy
+
+✔️ Frontend: Vercel | ✔️ Backend: PythonAnywhere
+
 <div id="running_backend">
   <h2>⚙ Running [Backend]</h2>
 </div>
