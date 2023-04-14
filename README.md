@@ -21,7 +21,7 @@
 This repository was created as part of an application for a full-stack web development position at WEG. The position required expertise in statistics and data science, as well as experience building dashboard monitoring websites. To showcase my skills and experience, I created two projects, and this is one of them.
 <br>
 <br>
-The first project, Megasena-Generator, is a full-stack application that incorporates advanced data science analyses, including statistics and machine learning. It features a backend API built with Python/Django and a modern frontend with React, using the latest tools as of 2023.
+The first project, <a href="https://github.com/leonardoacr/megasena-generator">Mega-Sena Genereator</a>, is a full-stack application that incorporates advanced data science analyses, including statistics and machine learning. It features a backend API built with Python/Django and a modern frontend with React, using the latest tools as of 2023.
 <br>
 <br>
 However, while Megasena-Generator includes graphs using Charts.js, it lacks some of the dashboard functionality that WEG was specifically looking for. To address this, I created a separate project, WEG Dashboards, that focuses on building customizable and interactive dashboards using two additional libraries: Plotly.js and Victory. The project also includes a simple login form with JWT authentication, built with Python/Django. 
