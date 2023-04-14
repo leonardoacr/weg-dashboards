@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import React from "react";
 import Dashboard from "@/components/Dashboard";
+import { withAuth } from "@/components/WithAuth";
 
 const Dashboards = () => {
   return (
@@ -14,4 +15,4 @@ const Dashboards = () => {
   );
 };
 
-export default Dashboards;
+export default withAuth(Dashboards);

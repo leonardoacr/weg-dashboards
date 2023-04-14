@@ -1,8 +1,9 @@
 import React, { FormEvent, useState } from "react";
 import { GiExitDoor } from "react-icons/gi";
-import { AiFillCaretDown, AiOutlineClose } from "react-icons/ai";
+import { AiFillCaretDown } from "react-icons/ai";
 import Cookies from "js-cookie";
 import { useRouter } from "next/router";
+import Warning from "./Warning";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -11,14 +12,8 @@ const Login = () => {
 
   const router = useRouter();
 
-  const handleCloseWarning = () => {
-    setShowWarning(false);
-  };
-
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-
-    console.log("sending data: " + username + " " + password);
 
     const formData = new URLSearchParams();
     formData.append("username", username);
@@ -42,28 +37,20 @@ const Login = () => {
     }
   };
 
+  const handleCloseWarning = () => {
+    setShowWarning(false);
+  };
+
   return (
     <>
       {showWarning && (
-        <div className="flex w-full items-center justify-center">
-          <div className="flex justify-center" />
-          <div className="relative mx-auto w-9/12 bg-red-100 p-4 text-black">
-            <button
-              className="absolute top-3 right-0 p-2  text-gray-500 text-opacity-50 hover:text-gray-800 focus:outline-none"
-              onClick={handleCloseWarning}
-            >
-              <AiOutlineClose size={16} />
-            </button>
-            <h2 className="text-pink-800">
-              Usuário ou senha inválida.Tente novamente ou entre em contato com
-              nossa central de atendimento pelo e-mail
-            </h2>
-          </div>
-        </div>
+        <Warning
+          message={`Usuário ou senha inválida.Tente novamente ou entre em contato com 
+          nossa central de atendimento pelo e-mail`}
+          showWarning={showWarning}
+          onCloseWarning={handleCloseWarning}
+        />
       )}
-      <p className=" text-gray-700">
-        username: admin <br></br> password: admin
-      </p>
       <div className="flex h-screen items-center justify-center">
         <form
           className="mb-32 border border-l-0 border-t-0 border-slate-400 bg-white pb-8 
@@ -86,12 +73,14 @@ const Login = () => {
                 Nome de Usuário *
               </label>
               <input
-                className="focus:shadow-outline w-full appearance-none rounded-[2px] border border-gray-300 py-2
-             px-3 leading-tight text-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                className="focus:shadow-outline w-full appearance-none rounded-[2px] border
+                 border-gray-300 py-2 px-3 leading-tight text-gray-700 focus:outline-none
+                  focus:ring-1 focus:ring-blue-500"
                 id="username"
                 type="text"
                 value={username}
                 onChange={(event) => setUsername(event.target.value)}
+                placeholder="admin"
               />
             </div>
 
@@ -103,12 +92,14 @@ const Login = () => {
                 Senha *
               </label>
               <input
-                className="focus:shadow-outline w-full appearance-none rounded-[2px] border border-gray-300 py-2 
-          px-3 leading-tight text-gray-700 focus:border-blue-500 focus:outline-none focus:ring-1"
+                className="focus:shadow-outline w-full appearance-none rounded-[2px] border
+                 border-gray-300 py-2 px-3 leading-tight text-gray-700 focus:border-blue-500 
+                 focus:outline-none focus:ring-1"
                 id="password"
                 type="password"
                 value={password}
                 onChange={(event) => setPassword(event.target.value)}
+                placeholder="admin"
               />
             </div>
             <div className="flex items-center">

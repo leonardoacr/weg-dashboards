@@ -2,9 +2,13 @@ import { firstGraphData } from "@/data/firstGraph";
 import { fourthGraphData } from "@/data/fourthGraph";
 import { secondGraphData } from "@/data/secondGraph";
 import { thirdGraphData } from "@/data/thirdGraph";
-import Graphs from "./Graphs";
 import Table from "./../Table";
 import GraphStatusHistory from "./GraphStatusHistory";
+import dynamic from "next/dynamic";
+
+const DynamicPlot = dynamic(import("./Graphs"), {
+  ssr: false,
+});
 
 const GraphsDashboards = () => {
   const chartLabelColor = "#636365";
@@ -12,10 +16,10 @@ const GraphsDashboards = () => {
   const chartHeight = "lg:h-96 sm:h-20";
 
   return (
-    <div className="">
+    <div>
       <div className="grid grid-cols-1 gap-3 px-6 text-black sm:grid-cols-1 lg:grid-cols-2">
         <div className={`${chartHeight} w-full`}>
-          <Graphs
+          <DynamicPlot
             graphData={[
               {
                 title: "Produtividade por Máquina",
@@ -29,7 +33,7 @@ const GraphsDashboards = () => {
           />
         </div>
         <div className={`${chartHeight} w-full`}>
-          <Graphs
+          <DynamicPlot
             graphData={[
               {
                 title: "Curva Gaussiana e Six-Sigma",
@@ -43,7 +47,7 @@ const GraphsDashboards = () => {
           />
         </div>
         <div className={`${chartHeight} w-full`}>
-          <Graphs
+          <DynamicPlot
             graphData={[
               {
                 title: "Diagrama de Pareto",
@@ -66,7 +70,7 @@ const GraphsDashboards = () => {
             </div>
             <div className="grid grid-cols-1 sm:h-1/2 sm:grid-cols-2 md:h-64">
               <div className="h-full w-full">
-                <Graphs
+                <DynamicPlot
                   graphData={[
                     {
                       title: "",
