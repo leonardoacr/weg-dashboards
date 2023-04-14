@@ -73,22 +73,24 @@ const Header = () => {
         )}
       </div>
       <hr className="mt-16 border-t border-gray-600" />
-      <div
-        className="flex h-10 items-center justify-center
+      {token && (
+        <div
+          className="flex h-10 items-center justify-center
        bg-background-header text-gray-400"
-      >
-        {routes.map((route) => (
-          <Link key={route.path} href={route.path}>
-            <span
-              className={`mx-2 cursor-pointer font-bold ${
-                router.pathname === route.path ? "text-gray-200" : ""
-              }`}
-            >
-              {route.name}
-            </span>
-          </Link>
-        ))}
-      </div>
+        >
+          {routes.map((route) => (
+            <Link key={route.path} href={route.path}>
+              <span
+                className={`mx-2 cursor-pointer font-bold ${
+                  router.pathname === route.path ? "text-gray-200" : ""
+                }`}
+              >
+                {route.name}
+              </span>
+            </Link>
+          ))}
+        </div>
+      )}
     </>
   );
 };
