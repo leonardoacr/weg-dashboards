@@ -121,7 +121,7 @@ const Login = () => {
                 <div className="flex flex-col justify-center">
                   <div
                     className="focus:shadow-outline rounded-r-[4px] bg-weg-blue py-2 px-4
-      text-sm font-normal text-white hover:bg-sky-700 focus:outline-none"
+                    text-sm font-normal text-white hover:bg-sky-700 focus:outline-none"
                   >
                     ENTRAR
                   </div>
@@ -139,7 +139,8 @@ const Login = () => {
             <div className="flex w-full items-center justify-center pt-4 ">
               <a
                 href="#"
-                className="text-md cursor-pointer text-center text-weg-blue hover:text-sky-900 hover:underline"
+                className="text-md cursor-pointer text-center text-weg-blue
+                 hover:text-sky-900 hover:underline"
               >
                 CRIAR CONTA
               </a>
