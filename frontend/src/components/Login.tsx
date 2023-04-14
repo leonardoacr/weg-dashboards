@@ -18,8 +18,9 @@ const Login = () => {
     const formData = new URLSearchParams();
     formData.append("username", username);
     formData.append("password", password);
+    const urlBase = "http://localhost:8000/login/";
 
-    const response = await fetch("http://localhost:8000/login/", {
+    const response = await fetch(urlBase, {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
