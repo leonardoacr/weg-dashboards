@@ -1,5 +1,12 @@
 # <a href="https://weg-dashboards.vercel.app/">WEG Dashboards</a>
 
+<div align="center">
+<a href="#description">Description</a> •
+ <a href="#technologies">Technologies</a> •
+ <a href="#running_backend">Running the Backend</a> •
+  <a href="#running_frontend">Running the Frontend</a> 
+</div>
+
 ## :camera: Overview
 
 <div align="center" >
@@ -16,7 +23,9 @@
 <br>
 <br>
 
-# 📚 Description
+<div id="description">
+  <h2>📚 Description</h2>
+</div>
 
 This repository was created as part of an application for a full-stack web development position at WEG. The position required expertise in statistics and data science, as well as experience building dashboard monitoring websites. To showcase my skills and experience, I created two projects, and this is one of them.
 <br>
@@ -38,6 +47,7 @@ username (Nome de Usuário): admin <br>
 password (Senha): admin
 <br>
 <br>
+
 <div id="technologies">
   <h2>:rocket: Technologies</h2>
 </div>
