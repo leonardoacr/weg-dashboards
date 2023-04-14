@@ -30,6 +30,7 @@ const Login = () => {
     if (response.ok) {
       const { token } = await response.json();
       Cookies.set("token", token); // Set the token as a cookie
+      Cookies.set("username", username);
       router.push("/dashboards");
     } else {
       setShowWarning(true);
